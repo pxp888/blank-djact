@@ -36,7 +36,7 @@ function Topbar({current, setCurrent, uname, setUname}) {
 
 	return (
 		<div id="topbar">
-			<p className="logo" onClick={logoClicked}>myApp</p>
+			<p className="logo" onClick={logoClicked}>partyShots</p>
 			{uname === '' ? 
 				<nav>
 					<p onClick={login}>Login</p>

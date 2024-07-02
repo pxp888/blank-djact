@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import './Login.css';
 
 function Login({setCurrent, setUname}) {
     const [message, setMessage] = useState('');
@@ -39,10 +40,12 @@ function Login({setCurrent, setUname}) {
 
     return (
         <>
-            <div id="login">
+            <div id="login" className="logform">
                 <h1>Login</h1>
                 <form onSubmit={handleSubmit}>
+                    <label htmlFor="username">username</label>
                     <input type="text" name="username" placeholder="Username" />
+                    <label htmlFor="password">password</label>
                     <input type="password" name="password" placeholder="Password" />
                     <button>Login</button>
                 </form>
