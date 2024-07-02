@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import Topbar from './components/Topbar';
 import Landing from './components/Landing';
-import Login from './components/Login';
-import Register from './components/Register';
+import Login from './components/accounts/Login';
+import Register from './components/accounts/Register';
 
 
 import './App.css';

@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import LogoutButton from './accounts/Logout';
 
 import './Topbar.css';
 
@@ -21,22 +21,9 @@ function Topbar({current, setCurrent, uname, setUname}) {
 		setCurrent('register');
 	}
 
-	function logout(e) {
-		e.preventDefault();
-		axios.post('http://localhost:8000/api/logout/', {
-			message: 'logout',
-		}).then(response => {
-			axios.defaults.headers.common['Authorization'] = null;
-			localStorage.removeItem('access_token');
-			localStorage.removeItem('refresh_token');
-			setUname('');
-			setCurrent('landing');
-		}).catch(error => { console.log(error); });
-	}
-
 	return (
 		<div id="topbar">
-			<p className="logo" onClick={logoClicked}>partyShots</p>
+			<p className="logo" onClick={logoClicked}>myApp</p>
 			{uname === '' ? 
 				<nav>
 					<p onClick={login}>Login</p>
@@ -45,7 +32,7 @@ function Topbar({current, setCurrent, uname, setUname}) {
 				:
 				<nav>
 					<p>{uname}</p>
-					<p onClick={logout}>logout</p>
+					<LogoutButton setUname={setUname} setCurrent={setCurrent} />
 				</nav>	
 			}
 		</div>

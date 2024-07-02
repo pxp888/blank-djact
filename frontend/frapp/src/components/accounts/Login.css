@@ -34,3 +34,10 @@
     color: white;
     grid-column-start: 2;
 }
+
+.logform button:focus {
+    border: blue 2px solid;
+    border-color: blue;
+    background-color: blue;
+}
+

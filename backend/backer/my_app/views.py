@@ -21,7 +21,7 @@ def test(request):
     }
     print(reps)
     return Response(reps)
-    
+
 
 @api_view(['POST'])
 def register(request):
@@ -39,6 +39,8 @@ def register(request):
         return Response({'message': 'password is required'})
     if password != password2:
         return Response({'message': 'passwords do not match'})
+    if len(password) < 6:
+        return Response({'message': 'password is too short'})
     old = User.objects.filter(username=name)
     if old:
         return Response({'message': 'user already exists'})

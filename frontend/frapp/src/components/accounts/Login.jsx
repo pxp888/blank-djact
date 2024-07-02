@@ -9,7 +9,7 @@ function Login({setCurrent, setUname}) {
     function handleSubmit(event) {
         event.preventDefault();
         const data = new FormData(event.target);
-
+        
         const user = {
             username: data.get('username'),
             password: data.get('password')
