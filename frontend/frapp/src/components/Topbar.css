@@ -1,0 +1,38 @@
+#topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    border-bottom: rgb(65, 65, 65) 1px solid;
+
+    color: white;
+    background-color: gray;
+}
+
+#topbar nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    
+    color: white;
+}
+
+#topbar .logo {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-decoration: none;
+
+    margin-left: 1rem;
+
+    color: white;
+    cursor: pointer;
+}
+
+#topbar nav a:hover {
+    color: rgb(172, 65, 149);
+}
+
+nav p {
+    cursor: pointer;
+}
+
